@@ -1,0 +1,11 @@
+{
+	"configurations": [
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - ShowHiddenFiles",
+			"request": "launch",
+			"mainClass": "methodreference.ShowHiddenFiles",
+			"projectName": "javabasic"
+		}
+	]
+}
