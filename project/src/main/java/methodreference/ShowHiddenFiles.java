@@ -39,7 +39,6 @@ public class ShowHiddenFiles {
                 return o1.getName().compareTo(o2.getName());
             }
         };
-        
         //Lambda
         Comparator<File> lcompare=(File o1, File o2)->o1.getName().compareTo(o2.getName());
     }
