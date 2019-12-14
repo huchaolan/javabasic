@@ -32,9 +32,7 @@ File[] hiddenFiles = new File(".").listFiles(new FileFilter(){
 Java8体现了更广义的将`函数`作为`值`的思想包括Lambda函数。
 `(int x) -> x + 1`表示“调用时给定参数x,就返回x+1值的函数
 
->`谓词(predicate)`是类似函数的东西，它接受一个参数值，并返回true或false。
-
-lambda函数是一种记法，用于解决短方法很多的问题，代码更干净，清晰
+>`谓词(predicate)`是类似函数的东西，它接受一个参数值，并返回true或false。lambda函数是一种记法，**解决短方法很多的问题，代码更干净，清晰**
 
 ```java
 filterApples(inventory,(Apple a)->"green".equals(a.getColor()));
