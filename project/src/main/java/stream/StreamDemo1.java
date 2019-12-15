@@ -13,7 +13,10 @@ import org.junit.Test;
 import stream.bean.Dish;
 import stream.util.StreamDemoUtil;
 
-public class StreamDemo1 extends TestCase{
+public class StreamDemo1 {
+	/**
+	 * Java8以前的方式
+	 */
 	@Test
 	public void demo1() {
 		List<Dish> lowCaloricDishes = new ArrayList<>();
@@ -37,14 +40,17 @@ public class StreamDemo1 extends TestCase{
 		System.out.println(lowCaloricDishesName);
 	}
 	
+	/**
+	 * stream方式
+	 */
 	@Test
 	public void demo2() {
 		List<Integer> lowCaloricDishesName = StreamDemoUtil.genDishList().stream()
 			.filter(d->d.getCalories()<300)
-			.sorted(Comparator.comparingInt(Dish::getCalories))
+			//.sorted(Comparator.comparingInt(Dish::getCalories))
+			.limit(3)
 			.map(Dish::getCalories)
 			.collect(Collectors.toList());
 		System.out.println(lowCaloricDishesName);
-			
 	}
 }

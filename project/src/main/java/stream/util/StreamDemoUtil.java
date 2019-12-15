@@ -13,7 +13,7 @@ public class StreamDemoUtil {
 	public static List<Dish> genDishList() {
 		final Random r = new Random(System.currentTimeMillis());
 		return Collections.nCopies(400, new Dish()).stream()
-			.map((d)->{
+			.map(d->{
 					int c = r.nextInt(400);
 					Dish dd = new Dish();
 					dd.setCalories(c);
