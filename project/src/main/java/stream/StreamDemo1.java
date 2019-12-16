@@ -1,12 +1,11 @@
 package stream;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import junit.framework.TestCase;
 
 import org.junit.Test;
 
@@ -52,5 +51,13 @@ public class StreamDemo1 {
 			.map(Dish::getCalories)
 			.collect(Collectors.toList());
 		System.out.println(lowCaloricDishesName);
+	}
+	
+	@Test
+	public void distinctDemo() {
+		List<Integer> numbers = Arrays.asList(1,1,2,2,3,3,4,5,4);
+		numbers.stream().filter(i->i%2==0)
+			.distinct().forEach(System.out::println);
+		
 	}
 }
